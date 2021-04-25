@@ -1,0 +1,16 @@
+
+<html>
+<body>
+<p id = "location"></p>
+<script>
+   var loc = document.getElementById("location");
+   if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(getPos);
+   }
+   function getPos(position) {
+      loc.innerHTML = "Latitude: " + position.coords.latitude +
+      " </br> Longitude: " + position.coords.longitude;
+   }
+</script>
+</body>
+</html>
